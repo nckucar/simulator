@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOptimizing: 1
-  pedTotalCount: 100
+  pedTotalCount: 10
   pedPrefab: {fileID: 1752442323004168, guid: b451652754bacb442bd2abea01860807, type: 2}
   pedestrians:
   - {fileID: 1763419275135856, guid: c8f08abcc89a79e44b5cf4c76cb350be, type: 2}
