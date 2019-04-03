@@ -6073,6 +6073,7 @@ GameObject:
   - component: {fileID: 114346634914459286}
   - component: {fileID: 114494972714079638}
   - component: {fileID: 114497289335752918}
+  - component: {fileID: 114578903791743968}
   m_Layer: 8
   m_Name: NCKU_MKZ_V2
   m_TagString: Player
@@ -25571,7 +25572,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e8dd2d070b5c245dea0a25190f74cdf6, type: 2}
+  - {fileID: 2100000, guid: 41164d76bf5f84ca4a11237cc386918c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32169,6 +32170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114578903791743968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795058563225254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab279a170764e24fae6e45664ee1593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 1
 --- !u!114 &114581456419856820
 MonoBehaviour:
   m_ObjectHideFlags: 1
