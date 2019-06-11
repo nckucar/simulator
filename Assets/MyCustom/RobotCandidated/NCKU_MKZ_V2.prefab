@@ -2069,6 +2069,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1248114808720056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4376769449370744}
+  - component: {fileID: 114766277314809548}
+  m_Layer: 8
+  m_Name: RushCreater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1249039571445932
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,7 +6093,7 @@ GameObject:
   m_Layer: 8
   m_Name: NCKU_MKZ_V2
   m_TagString: Player
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9764,6 +9780,19 @@ Transform:
   m_Father: {fileID: 4426246742721864}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4376769449370744
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1248114808720056}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -21.83, y: 0, z: 49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4849624451677374}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4381429597884892
 Transform:
   m_ObjectHideFlags: 1
@@ -12950,7 +12979,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795058563225254}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 78, y: 11, z: -11.9}
+  m_LocalPosition: {x: 83.96, y: 11.76, z: -37.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4719862465083738}
@@ -12979,6 +13008,7 @@ Transform:
   - {fileID: 4866129594628006}
   - {fileID: 4148889122317124}
   - {fileID: 4043238193502344}
+  - {fileID: 4376769449370744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -32587,6 +32617,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114766277314809548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1248114808720056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96dc2dad0a9ca43a4b329a64bf768a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RushPedestrian: {fileID: 1808907860188620, guid: 4440201e68484442cad12d4597623aab,
+    type: 2}
+  isEnabled: 0
 --- !u!114 &114806370163892434
 MonoBehaviour:
   m_ObjectHideFlags: 1
