@@ -34,8 +34,5 @@ EditorBuildSettings:
     guid: 492bd906eec73934f92bdfe94f2468ff
   - enabled: 1
     path: Assets/Scenes/Shalun_NCKU.unity
-    guid: f1df03f0b2f014d0e9902bcd5a99fc3d
-  - enabled: 1
-    path: Assets/Scenes/Shalun_merge.unity
     guid: 52fec106e164942848cc651c1c3c3b7a
   m_configObjects: {}

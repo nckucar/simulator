@@ -6089,7 +6089,7 @@ GameObject:
   - component: {fileID: 114346634914459286}
   - component: {fileID: 114494972714079638}
   - component: {fileID: 114497289335752918}
-  - component: {fileID: 114578903791743968}
+  - component: {fileID: 114195082165700688}
   m_Layer: 8
   m_Name: NCKU_MKZ_V2
   m_TagString: Player
@@ -30516,6 +30516,17 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114195082165700688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795058563225254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a766724b82f349f68682e7f854bb410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114196309450678928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32203,18 +32214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!114 &114578903791743968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795058563225254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab279a170764e24fae6e45664ee1593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 1
 --- !u!114 &114581456419856820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32394,7 +32393,7 @@ MonoBehaviour:
   accellInput: 0
   steerInput: 0
   leftTurnSignal: 0
-  rightTurnSignal: 0
+  rightTurnSignal: 1
   handbrakeApplied: 0
   wiperStatus: 0
   ignitionStatus: 1
