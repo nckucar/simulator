@@ -7,17 +7,24 @@ public class ScenarioController : MonoBehaviour {
 
 	public GameObject Vehicle;
 	public bool NeonScenario = false;
+	public bool PassScenario = false;
 	Toggle NeonToggle;
-
+	Toggle PassToggle;
 	public GameObject NeonHouse;
+	public GameObject PassScenarioPedtrain;
 
 	private bool isNeonCreate = false;
+	private bool isPassCreate = false;
 	private GameObject InstantNeon;
+	private GameObject InstantPedestrain;
 	// Use this for initialization
 	void Start () {
 		//Add Neon Scenario to ScenarioTweakables
         NeonToggle = ScenarioTweakables.Instance.AddCheckbox("Neon Scenario", NeonScenario);
         NeonToggle.onValueChanged.AddListener(x => NeonScenario = x);
+		//Add Pass Scenario to ScenarioTweakables
+		PassToggle = ScenarioTweakables.Instance.AddCheckbox("Pass Scenario", PassScenario);
+		PassToggle.onValueChanged.AddListener(x => PassScenario = x);
 	}
 	
 	// Update is called once per frame
@@ -38,5 +45,17 @@ public class ScenarioController : MonoBehaviour {
 			Destroy(InstantNeon);
 			isNeonCreate = false;
 		 }
+
+		 if(PassScenario && !isPassCreate)
+		 {
+			InstantPedestrain = Instantiate(PassScenarioPedtrain);
+			isPassCreate = true;
+		 }
+		 else if (!PassScenario && isPassCreate)
+		 {
+			Destroy(InstantPedestrain);
+			isPassCreate = false;
+		 }
+
 	}
 }

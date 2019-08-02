@@ -51,4 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b28eb51147f54123bd46c7e2dd13682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vehicle: {fileID: 0}
   NeonScenario: 0
+  PassScenario: 1
+  NeonHouse: {fileID: 1476985817677280, guid: f3f18cf0ec7c14af9b7e8446260ed817, type: 2}
+  PassScenarioPedtrain: {fileID: 1248504326738640, guid: ac22c539be976458b80532cce990dbe1,
+    type: 2}
