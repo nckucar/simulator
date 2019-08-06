@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenariorPedestrainTrigger : MonoBehaviour {
+public class ScenarioPedestrainTrigger : MonoBehaviour {
 
-	public GameObject PassScenarioPedestrain;
+	public GameObject OvertakeScenarioPedtrain;
 	// Use this for initialization
 	void Start () {
-		PassScenarioPedestrain =  transform.parent.gameObject;
+		OvertakeScenarioPedtrain =  transform.parent.gameObject;
 	}
 	
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.name == "BoundingBox" && other.gameObject.transform.root.tag == "Player")
 		{
-			PassScenarioPedestrain.GetComponent<PassScenarioPedestrainControl>().IsTriggered = true;
+			OvertakeScenarioPedtrain.GetComponent<OvertakeScenarioPedestrainControl>().IsTriggered = true;
 		}
 	}
 }

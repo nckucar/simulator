@@ -10,8 +10,8 @@ import lgsvl
 import collections
 import time
 import random
-# Connects to the simulator instance at the ip defined by SIMULATOR_HOST, default is localhost or 127.0.0.1
-sim = lgsvl.Simulator(os.environ.get("SIMULATOR_HOST", "127.0.0.1"), 8181)
+# Connects to the simulator instance at the ip SIMULATOR_HOST（Environment Variable）, default is localhost or 127.0.0.1
+sim = lgsvl.Simulator(os.environ.get("SIMULATOR_HOST","127.0.0.1"), 8181)
 
 if sim.current_scene == "Shalun_NCKU":
   sim.reset()
@@ -39,7 +39,6 @@ waypoints = [
   lgsvl.DriveWaypoint(lgsvl.Vector( 55.93,10.2,10), 12),
   lgsvl.DriveWaypoint(lgsvl.Vector( 58.34,10.2,8.82), 12),
   lgsvl.DriveWaypoint(lgsvl.Vector( 59 ,10.2,6.92), 12),
-  
   #Straight line
   lgsvl.DriveWaypoint(lgsvl.Vector( 60,10.2,-27), 12),
   #Curved road
@@ -60,42 +59,53 @@ waypoints = [
   lgsvl.DriveWaypoint(lgsvl.Vector( -83.95,10.2,-16.5), 12),
 ]
 
-
-#EGO vehicle
+#Set EGO position
 spawns = sim.get_spawn()
 state = lgsvl.AgentState()
 state.transform = spawns[0]
 state.transform.position.x =  52.2
-state.transform.position.y =  10.3
+state.transform.position.y =  10.6
 state.transform.position.z =  15
 state.transform.rotation.y = -90
+#Add EGO vehicle 
 ego = sim.add_agent("NCKU_MKZ_V2", lgsvl.AgentType.EGO, state)
+# The EGO is now looking for a bridge at the specified BRIDGE_HOST（Environment Variable） and port 
+ego.connect_bridge(os.environ.get("BRIDGE_HOST", "127.0.0.1"),9090)
+print("Waiting for connection...")
+
+while not ego.bridge_connected:
+  time.sleep(1)
+
+print("Bridge connected:", ego.bridge_connected)
 
 
-#NPC vehicle
+#Set NPC position
 state = lgsvl.AgentState()
 state.transform = spawns[0]
 state.transform.position.x = -48.67
 state.transform.position.y =  10.2
 state.transform.position.z =  15
 state.transform.rotation.y = -90
-#npc0 is the NCP which stop on trffic ligth
+#NPC0 is the NCP which stop on trffic ligth
 npc0 = sim.add_agent(random.choice(NPCname), lgsvl.AgentType.NPC, state)
 
 
 
-#other NPC-name  start form npc1 
+#Set NPC1~NPC4 position
 state.transform.rotation.y =  0
 state.transform.position = waypoints[0].position
 npc1 = sim.add_agent(random.choice(NPCname), lgsvl.AgentType.NPC, state)
+#Method to make vehicle follow specific waypoints, second argument mean whether waypoint keep loop
 npc1.follow(waypoints,True)
 
+#Change waypoints index for  NPC2 
 waypoints.insert(0,waypoints.pop())
 waypoints.insert(0,waypoints.pop())
 state.transform.position = waypoints[0].position
 npc2 = sim.add_agent(random.choice(NPCname), lgsvl.AgentType.NPC, state)
 npc2.follow(waypoints,True)
 
+#Change waypoints index for  NPC3
 waypoints.insert(0,waypoints.pop())
 waypoints.insert(0,waypoints.pop())
 waypoints.insert(0,waypoints.pop())
@@ -105,7 +115,7 @@ state.transform.position = waypoints[0].position
 npc3 = sim.add_agent(random.choice(NPCname), lgsvl.AgentType.NPC, state)
 npc3.follow(waypoints,True)
 
-
+#Change waypoints index for  NPC4
 waypoints.insert(0,waypoints.pop())
 waypoints.insert(0,waypoints.pop())
 state.transform.rotation.y = -75

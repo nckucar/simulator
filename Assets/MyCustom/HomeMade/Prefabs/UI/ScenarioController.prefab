@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vehicle: {fileID: 0}
   NeonScenario: 0
-  PassScenario: 1
+  OvertakeScenario: 0
   NeonHouse: {fileID: 1476985817677280, guid: f3f18cf0ec7c14af9b7e8446260ed817, type: 2}
-  PassScenarioPedtrain: {fileID: 1248504326738640, guid: ac22c539be976458b80532cce990dbe1,
+  OvertakeScenarioPedtrain: {fileID: 1248504326738640, guid: ac22c539be976458b80532cce990dbe1,
     type: 2}
