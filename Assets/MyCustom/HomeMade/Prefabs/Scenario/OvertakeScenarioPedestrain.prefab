@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 195073595260893034}
   - component: {fileID: 114257577512931290}
   m_Layer: 18
-  m_Name: PassScenarioPedestrain
+  m_Name: OvertakeScenarioPedestrain
   m_TagString: Pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,7 +538,7 @@ GameObject:
   m_Layer: 18
   m_Name: EndPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a89e786020f416f96c3f5e3e1576fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PassScenarioPedestrain: {fileID: 1248504326738640}
+  OvertakeScenarioPedtrain: {fileID: 0}
 --- !u!136 &136366558057822072
 CapsuleCollider:
   m_ObjectHideFlags: 1
