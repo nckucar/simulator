@@ -6088,8 +6088,8 @@ GameObject:
   - component: {fileID: 114376989837682358}
   - component: {fileID: 114346634914459286}
   - component: {fileID: 114494972714079638}
-  - component: {fileID: 114497289335752918}
   - component: {fileID: 114195082165700688}
+  - component: {fileID: 114916373513946662}
   m_Layer: 8
   m_Name: NCKU_MKZ_V2
   m_TagString: Player
@@ -31582,18 +31582,6 @@ MonoBehaviour:
   hoodCameraPosition: {fileID: 4865080508691280}
   thirdPersonCameraPosition: {fileID: 4904696548299288}
   reverseViewCameraPosition: {fileID: 4687651740164310}
---- !u!114 &114497289335752918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795058563225254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab279a170764e24fae6e45664ee1593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 1
 --- !u!114 &114504171959619576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32797,6 +32785,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114916373513946662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795058563225254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae59a307262c0413c96e8b3dd57a6b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 1
 --- !u!114 &114918954109215648
 MonoBehaviour:
   m_ObjectHideFlags: 1
