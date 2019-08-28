@@ -41,7 +41,6 @@ public class OvertakeScenarioPedestrainControl : MonoBehaviour {
 						if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
 						{
 							//If it arrived, do this thing:
-							print("Idle");
 							anim.SetTrigger("Idle");
 							IsArrived = true;
 						}						
