@@ -255,7 +255,7 @@ public class VehicleInputController : MonoBehaviour, Comm.BridgeClient
 
                     var ctrlCmd_linVel = msg.ctrl_cmd.linear_velocity;
                     var ctrlCmd_linAcc = msg.ctrl_cmd.linear_acceleration;
-                    var ctrlCmd_steerAng = msg.ctrl_cmd.steering_angle;
+                    var ctrlCmd_steerAng = msg.ctrl_cmd.steering_angle * -1;
 
                     if (ctrlCmd_linAcc == 0 && ctrlCmd_linVel == 0 && ctrlCmd_steerAng == 0) pub_ctrl_cmd = false;
                     else pub_ctrl_cmd = true;

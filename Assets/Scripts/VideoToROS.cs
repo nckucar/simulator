@@ -105,8 +105,10 @@ public class VideoToROS : MonoBehaviour, Comm.BridgeClient
         switch (resolutionType)
         {
             case ResolutionType.SD:
-                videoWidth = 640;
-                videoHeight = 480;
+                //videoWidth = 640;
+                //videoHeight = 480;
+                videoWidth = 320;
+                videoHeight = 320;
                 break;
             case ResolutionType.HD:
                 videoWidth = 1920;
